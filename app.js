@@ -6,9 +6,9 @@ const app = express();
 const cookieParser = require("cookie-parser");
 
 const path = require("path");
-const ownersrouter=require("./routes/ownersrouter");
-const productrouter=require("./routes/productrouter");
-const usersrouter=require("./routes/usersrouter");
+// const ownersrouter=require("./routes/ownersrouter");
+// const productrouter=require("./routes/productrouter");
+ const usersrouter=require("./routes/usersrouter");
 
 
 const db=require("./config/mongoose-connection");
@@ -25,9 +25,9 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Set EJS as the view engine
 app.set("view engine", "ejs");
-app.use("/owners",ownersrouter);
+// app.use("/owners",ownersrouter);
 app.use("/users",usersrouter);
-app.use("/products",productrouter);
+// app.use("/products",productrouter);
 
 // Set up a route for the root path
 app.get("/", (req, res) => {
