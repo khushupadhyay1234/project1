@@ -12,7 +12,7 @@ const path = require("path");
 
 
 const db=require("./config/mongoose-connection");
-
+require("dotenv").config();
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));

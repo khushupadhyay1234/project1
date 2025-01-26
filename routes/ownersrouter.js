@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const ownermodel = require("../models/owner-model"); // Corrected model import
+const ownermodel = require("../models/ownermodel"); // Corrected model import
 
 router.get("/", function(req, res) {
     res.send("hey it is working");
